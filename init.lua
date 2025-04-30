@@ -31,7 +31,7 @@ What is Kickstart?
     Once you've done that, you can start exploring, configuring and tinkering to
     make Neovim your own! That might mean leaving Kickstart just the way it is for a while
     or immediately breaking it into modular pieces. It's up to you!
-
+    
     If you don't know anything about Lua, I recommend taking some time to read through
     a guide. One possible example which will only take 10-15 minutes:
       - https://learnxinyminutes.com/docs/lua/
@@ -275,6 +275,12 @@ require('lazy').setup({
       },
     },
   },
+  {
+    "chrisgrieser/nvim-recorder",
+    dependencies = "rcarriga/nvim-notify", -- optional
+    opts = {}, -- required even with default settings, since it calls `setup()`
+  },
+  
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
